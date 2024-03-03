@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Make a simple form by executing the following event handlers and on Change functions.
+    For Email - make an onChange function to check if the value of input has more than 3 characters or not and if it contains "@" and "."
+    Similarly Password should be more than 8 characters, make an onChange function for the same.
+    As soon as the email and password pass the check make sure to remove the red errors and show a green text saying all good to go.
+    On click of the submit button throw a confirmation window and if the user presses okay, then throw an alert saying successful signup!
+    Else redirect them to the same page and clear all the input values. -->
+
+    <div class="container">
+      <h1>Login</h1>
+      <form action="index.html" method="post" name="form" onsubmit="return onChange()">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Example@email.com" />
+        <div class="email_error">
+          Make sure email is more than 3 characters and has @ and a .
+        </div>
+        <br /><br />
+        <label for="password">Password:</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="Your password" />
+        <div class="password_error">
+          Make sure password is more than 8 characters.
+        </div>
+        <br /><br />
+        <div class="proceed">All good to go!</div>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
